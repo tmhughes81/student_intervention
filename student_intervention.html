@@ -11850,7 +11850,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Calculate number of students</span>
@@ -11916,7 +11916,7 @@ Graduation rate of the class: 67.09%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Extract feature columns</span>
@@ -11998,7 +11998,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">preprocess_features</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -12069,7 +12069,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Import additional functionality</span>
@@ -12082,7 +12082,7 @@ Feature values:
 <span class="n">num_test</span> <span class="o">=</span> <span class="n">X_all</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">num_train</span>
 
 <span class="c"># Shuffle and split the dataset into the number of training and testing points above</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_all</span><span class="p">,</span> <span class="n">y_all</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="n">num_test</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_all</span><span class="p">,</span> <span class="n">y_all</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="n">num_test</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 
 <span class="c"># Show the results of the split</span>
 <span class="k">print</span> <span class="s">&quot;Training set has {} samples.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -12151,7 +12151,7 @@ Testing set has 95 samples.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>Model 1: Ensemble Method (Random Forest). It has been used for many machine learning problems, including analysis of DNA data.  Pros: Decision trees are often easy for humans to understand and tend to scale well.  Cons: A normal decision tree tends to have problems with overfitting, but by using an Ensemble Method, like Random Forest, should compensate for this weakness. Sources: <a href="https://www.quora.com/What-are-the-advantages-of-different-classification-algorithms">https://www.quora.com/What-are-the-advantages-of-different-classification-algorithms</a>, <a href="https://pratanalytics.wordpress.com/2014/11/25/pros-and-cons-of-classifiers/">https://pratanalytics.wordpress.com/2014/11/25/pros-and-cons-of-classifiers/</a></p>
+<p>Model 1: Ensemble Method (Random Forest). It has been used for many machine learning problems, including analysis of DNA data.  Pros: Random forest decision trees tend to scale well to larger numbers of data examples, and handle missing data fairly well.  Cons: A normal decision tree tends to have problems with overfitting, but by using an Ensemble Method, like Random Forest, should compensate for this weakness. Sources: <a href="https://www.quora.com/What-are-the-advantages-of-different-classification-algorithms">https://www.quora.com/What-are-the-advantages-of-different-classification-algorithms</a>, <a href="https://pratanalytics.wordpress.com/2014/11/25/pros-and-cons-of-classifiers/">https://pratanalytics.wordpress.com/2014/11/25/pros-and-cons-of-classifiers/</a></p>
 <p>Model 2: Gaussian Naive Bayes.  The Journal of Theoretical and Applied Information Technology has an article by AL-BARRAK and AL-RAZGAN (2015) has an article claiming to have achieved a high accuracy with a similar student success problem using a Naive Bayes classifier. Pros: Very simple to setup, and it often doesn't need much training data.  Cons: However, it assumes features are independent which may not be true with this data.  Even if the features are not independent, Naive Bayes classifiers often perform better than expected.  Given its success in a real world, similar application, and its overall simplicity, it may work well for this cost-conscious project.  Sources: <a href="http://www.jatit.org/volumes/Vol75No2/6Vol75No2.pdf">http://www.jatit.org/volumes/Vol75No2/6Vol75No2.pdf</a>, <a href="https://www.quora.com/What-are-the-advantages-of-different-classification-algorithms">https://www.quora.com/What-are-the-advantages-of-different-classification-algorithms</a>, <a href="https://pratanalytics.wordpress.com/2014/11/25/pros-and-cons-of-classifiers/">https://pratanalytics.wordpress.com/2014/11/25/pros-and-cons-of-classifiers/</a></p>
 <p>Model 3: Support Vector Machines.  Popular in text classification problems. Can have high accuracy, and some built in protections against overfitting.  Pros: Through the use of the Kernel Trick, SVMs can work well with data that is not obviously linearly separable.  Cons: However, SVMs can be inefficient to train, especially when working with a large number of training examples.  Furthermore, finding the right kernel can be challenging. Sources: <a href="https://www.quora.com/What-are-the-advantages-of-different-classification-algorithms">https://www.quora.com/What-are-the-advantages-of-different-classification-algorithms</a>, <a href="https://pratanalytics.wordpress.com/2014/11/25/pros-and-cons-of-classifiers/">https://pratanalytics.wordpress.com/2014/11/25/pros-and-cons-of-classifiers/</a></p>
 
@@ -12178,7 +12178,7 @@ Testing set has 95 samples.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">train_classifier</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">):</span>
@@ -12251,7 +12251,7 @@ Testing set has 95 samples.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Import the three supervised learning models from sklearn</span>
@@ -12260,9 +12260,9 @@ Testing set has 95 samples.
 <span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
 
 <span class="c"># Initialize the three models</span>
-<span class="n">clf_A</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">()</span>
+<span class="n">clf_A</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
 <span class="n">clf_B</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
-<span class="n">clf_C</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">()</span>
+<span class="n">clf_C</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
 
 <span class="c"># Set up the training set sizes</span>
 <span class="n">X_train_100</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
@@ -12304,59 +12304,59 @@ Testing set has 95 samples.
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training a RandomForestClassifier using a training set size of 100. . .
-Trained model in 0.0091 seconds
-Made predictions in 0.0010 seconds.
+Trained model in 0.0096 seconds
+Made predictions in 0.0011 seconds.
 F1 score for training set: 0.9844.
-Made predictions in 0.0009 seconds.
-F1 score for test set: 0.7287.
+Made predictions in 0.0011 seconds.
+F1 score for test set: 0.7153.
 Training a RandomForestClassifier using a training set size of 200. . .
-Trained model in 0.0075 seconds
+Trained model in 0.0074 seconds
 Made predictions in 0.0012 seconds.
-F1 score for training set: 0.9925.
-Made predictions in 0.0009 seconds.
-F1 score for test set: 0.7794.
+F1 score for training set: 0.9964.
+Made predictions in 0.0015 seconds.
+F1 score for test set: 0.7857.
 Training a RandomForestClassifier using a training set size of 300. . .
 Trained model in 0.0083 seconds
-Made predictions in 0.0015 seconds.
-F1 score for training set: 0.9976.
+Made predictions in 0.0016 seconds.
+F1 score for training set: 0.9951.
 Made predictions in 0.0010 seconds.
-F1 score for test set: 0.7612.
+F1 score for test set: 0.7907.
 Training a GaussianNB using a training set size of 100. . .
-Trained model in 0.0006 seconds
-Made predictions in 0.0003 seconds.
-F1 score for training set: 0.8550.
-Made predictions in 0.0003 seconds.
-F1 score for test set: 0.7481.
-Training a GaussianNB using a training set size of 200. . .
 Trained model in 0.0007 seconds
 Made predictions in 0.0003 seconds.
-F1 score for training set: 0.8321.
+F1 score for training set: 0.8467.
 Made predictions in 0.0003 seconds.
-F1 score for test set: 0.7132.
+F1 score for test set: 0.8029.
+Training a GaussianNB using a training set size of 200. . .
+Trained model in 0.0008 seconds
+Made predictions in 0.0004 seconds.
+F1 score for training set: 0.8406.
+Made predictions in 0.0003 seconds.
+F1 score for test set: 0.7244.
 Training a GaussianNB using a training set size of 300. . .
 Trained model in 0.0008 seconds
 Made predictions in 0.0005 seconds.
-F1 score for training set: 0.8088.
+F1 score for training set: 0.8038.
 Made predictions in 0.0003 seconds.
-F1 score for test set: 0.7500.
+F1 score for test set: 0.7634.
 Training a SVC using a training set size of 100. . .
-Trained model in 0.0011 seconds
+Trained model in 0.0012 seconds
 Made predictions in 0.0007 seconds.
-F1 score for training set: 0.8591.
+F1 score for training set: 0.8777.
 Made predictions in 0.0007 seconds.
-F1 score for test set: 0.7838.
+F1 score for test set: 0.7746.
 Training a SVC using a training set size of 200. . .
-Trained model in 0.0028 seconds
-Made predictions in 0.0021 seconds.
-F1 score for training set: 0.8693.
-Made predictions in 0.0011 seconds.
-F1 score for test set: 0.7755.
+Trained model in 0.0026 seconds
+Made predictions in 0.0024 seconds.
+F1 score for training set: 0.8679.
+Made predictions in 0.0012 seconds.
+F1 score for test set: 0.7815.
 Training a SVC using a training set size of 300. . .
-Trained model in 0.0058 seconds
-Made predictions in 0.0050 seconds.
-F1 score for training set: 0.8692.
-Made predictions in 0.0016 seconds.
-F1 score for test set: 0.7586.
+Trained model in 0.0065 seconds
+Made predictions in 0.0047 seconds.
+F1 score for training set: 0.8761.
+Made predictions in 0.0015 seconds.
+F1 score for test set: 0.7838.
 </pre>
 </div>
 </div>
@@ -12393,24 +12393,24 @@ F1 score for test set: 0.7586.
 <tbody>
 <tr>
 <td style="text-align:center">100</td>
-<td style="text-align:center">0.0091s</td>
-<td style="text-align:center">0.0009s</td>
+<td style="text-align:center">0.0096s</td>
+<td style="text-align:center">0.0011s</td>
 <td style="text-align:center">0.9844</td>
-<td style="text-align:center">0.7287</td>
+<td style="text-align:center">0.7153</td>
 </tr>
 <tr>
 <td style="text-align:center">200</td>
-<td style="text-align:center">0.0075s</td>
-<td style="text-align:center">0.0009s</td>
-<td style="text-align:center">0.9925</td>
-<td style="text-align:center">0.7794</td>
+<td style="text-align:center">0.0074s</td>
+<td style="text-align:center">0.0015s</td>
+<td style="text-align:center">0.9964</td>
+<td style="text-align:center">0.7857</td>
 </tr>
 <tr>
 <td style="text-align:center">300</td>
 <td style="text-align:center">0.0083s</td>
 <td style="text-align:center">0.0010s</td>
-<td style="text-align:center">0.9976</td>
-<td style="text-align:center">0.7612</td>
+<td style="text-align:center">0.9951</td>
+<td style="text-align:center">0.7907</td>
 </tr>
 </tbody>
 </table>
@@ -12427,24 +12427,24 @@ F1 score for test set: 0.7586.
 <tbody>
 <tr>
 <td style="text-align:center">100</td>
-<td style="text-align:center">0.0006s</td>
+<td style="text-align:center">0.0007s</td>
 <td style="text-align:center">0.0003s</td>
-<td style="text-align:center">0.8550</td>
-<td style="text-align:center">0.7481</td>
+<td style="text-align:center">0.8467</td>
+<td style="text-align:center">0.8029</td>
 </tr>
 <tr>
 <td style="text-align:center">200</td>
-<td style="text-align:center">0.0007s</td>
+<td style="text-align:center">0.0008s</td>
 <td style="text-align:center">0.0003s</td>
-<td style="text-align:center">0.8321</td>
-<td style="text-align:center">0.7132</td>
+<td style="text-align:center">0.8406</td>
+<td style="text-align:center">0.7244</td>
 </tr>
 <tr>
 <td style="text-align:center">300</td>
 <td style="text-align:center">0.0008s</td>
 <td style="text-align:center">0.0003s</td>
-<td style="text-align:center">0.8088</td>
-<td style="text-align:center">0.7500</td>
+<td style="text-align:center">0.8038</td>
+<td style="text-align:center">0.7634</td>
 </tr>
 </tbody>
 </table>
@@ -12461,24 +12461,24 @@ F1 score for test set: 0.7586.
 <tbody>
 <tr>
 <td style="text-align:center">100</td>
-<td style="text-align:center">0.0011s</td>
+<td style="text-align:center">0.0012s</td>
 <td style="text-align:center">0.0007s</td>
-<td style="text-align:center">0.8591</td>
-<td style="text-align:center">0.7838</td>
+<td style="text-align:center">0.8777</td>
+<td style="text-align:center">0.7746</td>
 </tr>
 <tr>
 <td style="text-align:center">200</td>
-<td style="text-align:center">0.0028s</td>
-<td style="text-align:center">0.0011s</td>
-<td style="text-align:center">0.8693</td>
-<td style="text-align:center">0.7755</td>
+<td style="text-align:center">0.0024s</td>
+<td style="text-align:center">0.0012s</td>
+<td style="text-align:center">0.8679</td>
+<td style="text-align:center">0.7815</td>
 </tr>
 <tr>
 <td style="text-align:center">300</td>
-<td style="text-align:center">0.0058s</td>
-<td style="text-align:center">0.0016s</td>
-<td style="text-align:center">0.8692</td>
-<td style="text-align:center">0.7586</td>
+<td style="text-align:center">0.0065s</td>
+<td style="text-align:center">0.0015s</td>
+<td style="text-align:center">0.8761</td>
+<td style="text-align:center">0.7838</td>
 </tr>
 </tbody>
 </table>
@@ -12512,7 +12512,7 @@ F1 score for test set: 0.7586.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong> Ultimately, I would argue the Random Forest model has the best balance of performance and resource cost.</p>
-<p>The Support Vector Machine appears to have the highest average F1 test performance, however the Training and Prediction time numbers strongly suggest that the SVM model will have trouble scaling to larger data sets.  By contrast, the Random Forest looks like it starts with a relatively high training time, but that number does not appear to be growing much at all as the training examples space grows.  So, for resource usage, the seems to perform almost as well as the SVM, but without scaling training times.  This gives a slight cost advantage to the Random Forest.</p>
+<p>The Support Vector Machine appears to have the highest average F1 test performance, however the Training and Prediction time numbers strongly suggest that the SVM model will have trouble scaling to larger data sets.  By contrast, the Random Forest looks like it starts with a relatively high training time, but that number does not appear to be growing much at all as the training examples space grows.  So, for resource usage, the seems to perform almost as well as (and possibly better than) the SVM, but without scaling training times.  This gives a slight cost advantage to the Random Forest, with minimal accuracy lost.</p>
 <p>By contrast, the Gaussian Naive Bayes classifier has minimal training times that seem to scale very well as more training examples are added.  However, the average F1 test scores for the Gaussian Naive Bayes model underperforms compared to the Random Forest averaged F1 test scores.  This gives a slight performance advantage to the Random Forest.</p>
 <p>(Tentative note: The Random Forest F1 training scores has me worried about a potential overfitting problem.  I believe this is corrected by the GridSearch below.)</p>
 
@@ -12567,28 +12567,32 @@ F1 score for test set: 0.7586.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Import &#39;GridSearchCV&#39; and &#39;make_scorer&#39;</span>
 <span class="kn">from</span> <span class="nn">sklearn.grid_search</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">make_scorer</span>
+<span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">StratifiedShuffleSplit</span>
 
 <span class="c"># Create the parameters list you wish to tune</span>
 <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">&#39;criterion&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;gini&quot;</span><span class="p">,</span> <span class="s">&quot;entropy&quot;</span><span class="p">],</span>
-    <span class="s">&#39;max_features&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
-    <span class="s">&#39;max_depth&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">45</span> <span class="p">]</span>
+    <span class="s">&#39;max_features&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+    <span class="s">&#39;max_depth&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="p">}</span>
 
 <span class="c"># Initialize the classifier</span>
-<span class="n">clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">()</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 
 <span class="c"># Make an f1 scoring function using &#39;make_scorer&#39; </span>
 <span class="n">f1_scorer</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">f1_score</span><span class="p">,</span> <span class="n">pos_label</span><span class="o">=</span><span class="s">&#39;yes&#39;</span><span class="p">)</span>
 
+<span class="c"># Stratified Shuffle Split object</span>
+<span class="n">ssscv</span> <span class="o">=</span> <span class="n">StratifiedShuffleSplit</span><span class="p">(</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+
 <span class="c"># Perform grid search on the classifier using the f1_scorer as the scoring method</span>
-<span class="n">grid_obj</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="n">f1_scorer</span><span class="p">)</span>
+<span class="n">grid_obj</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="n">ssscv</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="n">f1_scorer</span><span class="p">)</span>
 
 <span class="c"># Fit the grid search object to the training data and find the optimal parameters</span>
 <span class="n">grid_obj</span> <span class="o">=</span> <span class="n">grid_obj</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -12611,10 +12615,10 @@ F1 score for test set: 0.7586.
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Made predictions in 0.0011 seconds.
-Tuned model has a training F1 score of 0.8290.
-Made predictions in 0.0009 seconds.
-Tuned model has a testing F1 score of 0.7712.
+<pre>Made predictions in 0.0014 seconds.
+Tuned model has a training F1 score of 0.8371.
+Made predictions in 0.0010 seconds.
+Tuned model has a testing F1 score of 0.7945.
 </pre>
 </div>
 </div>
@@ -12639,7 +12643,7 @@ Tuned model has a testing F1 score of 0.7712.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-While the tuned testing F1 score of '0.7712' is not substantially better than the untuned values between '0.72' and '0.77', the training F1 score of '0.8290' on the tuned model suggests there is less overfitting going on in the tuned model, compared to the untuned range of '0.98' and '0.99'.</p>
+While the tuned testing F1 score of '0.7945' is not substantially better than the untuned value around '0.79', the training F1 score of '0.8371' on the tuned model suggests there is less overfitting going on in the tuned model, compared to the untuned values greater tha '0.98'.</p>
 
 </div>
 </div>
